@@ -1,8 +1,8 @@
 
 function makeTransaction(quantity, pricePerDroid, customerCredits) {
 const totalPrice = quantity * pricePerDroid;
-const texDroids = totalPrice == customerCredits ? `Insufficient funds!` : `You ordered ${quantity} droids worth ${totalPrice} credits!`;
-return texDroids;
+const transactionMessage = totalPrice > customerCredits ? `Insufficient funds!` : `You ordered ${quantity} droids worth ${totalPrice} credits!`;
+return transactionMessage;
 } 
  makeTransaction("5", "3000", "23000");
  makeTransaction("3", "1000", "15000");
